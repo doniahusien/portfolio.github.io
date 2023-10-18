@@ -102,6 +102,22 @@ body {
     object-fit: cover;
     border-radius: 50px;
 }
+.text ul{
+    width: 100%;
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:25px;
+}
+.text ul li{
+   font-size: 4vw;
+}
+.text ul li a{
+    color:white;
+    text-decoration:none;
+}
 
 .about {
     padding-top: 50px;
