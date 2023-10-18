@@ -436,6 +436,26 @@ textarea {
     .home div.text p{
         font-size:20px;
     }
+    .home div.text ul li a{
+        font-size: 35px;
+    }
+    .text ul{
+    width: 100%;
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:25px;
+}
+.text ul li{
+   font-size: 4vw;
+}
+.text ul li a{
+    color:white;
+    text-decoration:none;
+}
+
 
     .times {
 
