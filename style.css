@@ -226,6 +226,7 @@ body {
     padding: 10px 0px;
     justify-content: center;
     position: relative;
+    width:30%;
 }
 
 .icon span {
