@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #191d2b;
+    color: aliceblue;
+    padding-bottom: 70px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 1.3vw;
+    color: aliceblue;
+    position: fixed;
+    z-index: 10;
+    top: 20%;
+    right: 2%;
+}
+
+.controls .control {
+    background-color: #6c7983;
+    padding: 10px;
+    color: #c4cdd4;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.controls .control i {
+    font-size: 1.6vw
+}
+
+.controls .control:hover {
+    cursor: pointer;
+}
+
+.controls .activeBtn {
+    background-color: rgb(58, 222, 85);
+    color: rgb(1, 5, 5);
+}
+
+.home div.text,
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 20vh;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.home div {
+    padding: 0 50px;
+    width: 40%;
+}
+
+.home div.text {
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding-right: 25px;
+}
+
+.home div.text h1 {
+    font-size: 4vw;
+}
+
+.home div.text span {
+    color: rgb(58, 222, 85);
+}
+
+.home div.text p {
+    width: 100%;
+    font-size: 1.7vw;
+}
+
+.home .profile {
+    max-width: 30%;
+    height: auto;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.home .profile img {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(58, 222, 85);
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.about {
+    padding-top: 50px;
+    align-items: center;
+}
+
+.about .info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 55%;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about .info h1 {
+    font-size: 4vw;
+}
+
+.about .info h2 {
+    line-height: 4vw;
+    font-size: 1.3vw;
+}
+
+.about .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.about .skills h1 {
+    padding: 95px 0px;
+    font-size: 4vw;
+}
+
+.about .skills .bars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 70%;
+}
+
+.about .bars .bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.about .bars .bar p {
+    font-size: 1.5vw;
+}
+
+.about .bars .bar .prograss {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.about .bars .bar .line {
+    height: 50%;
+    width: 90%;
+    border-radius: 9px;
+    background-color: rgb(91, 89, 89);
+
+}
+
+.about .bars .bar .line:before {
+    content: '';
+    display: block;
+    background: rgb(58, 222, 85);
+    width: 90%;
+    height: 100%;
+    border-radius: 9px;
+    animation: move 4s ease-in-out;
+    transform: translateY(0) scaleY(1);
+}
+
+.about .bars .bar .two::before {
+    width: 80%;
+}
+
+.about .bars .bar .three::before {
+    width: 75%;
+}
+
+.about .bars .bar .six::before {
+    width: 60%;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-50%) scaleX(0);
+    }
+
+    100% {
+        transform: translateX(0) scaleX();
+    }
+}
+
+.times {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 70%;
+    padding-top: 5vw;
+}
+
+.times .item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 0px;
+    justify-content: center;
+    position: relative;
+}
+
+.icon span {
+    position: absolute;
+    left: 0px;
+    background-color: rgb(58, 222, 85);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.times .item .details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 2px solid #8c85904a;
+    padding-left: 80px;
+}
+
+.times .item .details .time {
+    background-color: #6c79838f;
+    width: fit-content;
+    font-size: 1.2vw;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.times .item .details h1 {
+    font-size: 2vw;
+}
+
+.times .item .details h1 span {
+    color: rgb(157, 162, 162);
+    font-weight: lighter;
+    font-size: 1.6vw;
+}
+
+.about .info,
+.about .skills,
+.about .times {
+    padding-bottom: 5vw;
+    border-bottom: #6c79834b 2px solid;
+
+}
+
+.protoflio,
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 25px;
+}
+
+.protoflio .projects {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 80%;
+    padding-top: 50px;
+}
+
+.protoflio .projects .projectItem .image {
+    width: 500px;
+}
+
+.protoflio .projects .projectItem {
+    height: auto;
+    position: relative;
+}
+
+.protoflio .projects .projectItem .hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(58, 222, 85, 0.574);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.protoflio .projects .projectItem .hover a {
+    color: #fff !important;
+    background-color: #6c7983;
+    font-size: 01vw;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.protoflio .projects .projectItem:hover .hover {
+    opacity: 1;
+}
+
+.protoflio .projects .projectItem .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.protoflio h1,
+.contact h1 {
+    font-size: 5vw;
+}
+
+.protoflio p,
+.contact p {
+    font-size: 1.5vw;
+}
+
+.contact .form {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .form form {
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .form form input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    height: 30%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #6c7983ad;
+    padding: 5px;
+    outline: none;
+    color: #fff;
+}
+
+.contact .form form input[type="submit"] {
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 1.2vw;
+}
+
+
+@media (min-width:769px) and (max-width: 1000px) {
+    .home .profile {
+        width: 30%;
+    }
+
+    .about .bars .bar {
+        width: 300px;
+    }
+
+    .controls {
+        padding-left: 50px;
+    }
+
+    .controls .control {
+        width: 50%;
+        height: 50%;
+    }
+
+    .controls .control i {
+        font-size: 2vw;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .home .profile {
+        padding-top: 50px;
+
+    }
+    .home .profile img{
+        object-fit:fill;
+        border-radius: 10px;
+    }
+
+    .home div.text {
+        width: 70%;
+    }
+    .home div.text h1{
+        font-size: 30px;
+    }
+    .home div.text p{
+        font-size:20px;
+    }
+
+    .times {
+
+        width: 80%;
+    }
+
+    .icon span {
+        width: 50px;
+        height: 50px;
+    }
+
+    .protoflio .projects .projectItem .image {
+        width: 200px;
+    }
+
+    .contact .form {
+        width: 90%;
+    }
+
+    .contact .form form {
+        width: 80%;
+    }
+
+    .protoflio p,
+    .contact p {
+        font-size: 2vw;
+    }
+
+    .controls {
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: #191d2b;
+    }
+
+    .controls .control {
+        margin: 1rem 0.3rem;
+        padding: 0;
+    }
+
+    .controls .control i {
+        font-size: 1rem;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+    animation: appear 1s ease-in-out;
+    transform: translateY(0) scaleY(1);
+}
+
+@keyframes appear {
+    0% {
+        transform: translateX(-100%) scaleX(0);
+    }
+
+    100% {
+        transform: translateX(0) scaleX();
+    }
+}
